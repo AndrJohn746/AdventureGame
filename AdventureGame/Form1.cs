@@ -24,7 +24,7 @@ namespace AdventureGame
         int soup = 0;
 
         Random randgen = new Random();
-
+        //
         //SoundPlayer bgmusic= new SoundPlayer(Properties.Resources.x);
 
         public Form1()
