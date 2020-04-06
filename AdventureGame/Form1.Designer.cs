@@ -37,6 +37,7 @@
             this.blueButton = new System.Windows.Forms.Button();
             this.yellowButton = new System.Windows.Forms.Button();
             this.redButton = new System.Windows.Forms.Button();
+            this.credit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // heading
@@ -67,13 +68,14 @@
             // outputLabel
             // 
             this.outputLabel.BackColor = System.Drawing.Color.LightPink;
-            this.outputLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputLabel.Location = new System.Drawing.Point(333, 72);
             this.outputLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(486, 329);
             this.outputLabel.TabIndex = 3;
-            this.outputLabel.Text = "Welcome to Wario Dating Simulator, currently in build v1.0.0!";
+            this.outputLabel.Text = "Welcome to Wario Dating Simulator, currently in build v1.0.0!\r\n\r\nWould you like t" +
+    "o play?";
             this.outputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // backingColor
@@ -102,7 +104,7 @@
             // 
             this.blueButton.FlatAppearance.BorderSize = 0;
             this.blueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.blueButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blueButton.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blueButton.Image = ((System.Drawing.Image)(resources.GetObject("blueButton.Image")));
             this.blueButton.Location = new System.Drawing.Point(13, 424);
             this.blueButton.Margin = new System.Windows.Forms.Padding(4);
@@ -111,13 +113,14 @@
             this.blueButton.TabIndex = 6;
             this.blueButton.Text = "Play Game";
             this.blueButton.UseVisualStyleBackColor = true;
+            this.blueButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             // 
             // yellowButton
             // 
             this.yellowButton.BackColor = System.Drawing.Color.Transparent;
             this.yellowButton.FlatAppearance.BorderSize = 0;
             this.yellowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yellowButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yellowButton.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yellowButton.Image = global::AdventureGame.Properties.Resources.yellow;
             this.yellowButton.Location = new System.Drawing.Point(339, 424);
             this.yellowButton.Margin = new System.Windows.Forms.Padding(4);
@@ -126,12 +129,13 @@
             this.yellowButton.TabIndex = 5;
             this.yellowButton.Text = ".";
             this.yellowButton.UseVisualStyleBackColor = false;
+            this.yellowButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             // 
             // redButton
             // 
             this.redButton.FlatAppearance.BorderSize = 0;
             this.redButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.redButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redButton.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.redButton.Image = ((System.Drawing.Image)(resources.GetObject("redButton.Image")));
             this.redButton.Location = new System.Drawing.Point(663, 424);
             this.redButton.Margin = new System.Windows.Forms.Padding(4);
@@ -140,12 +144,24 @@
             this.redButton.TabIndex = 1;
             this.redButton.Text = "Exit Game";
             this.redButton.UseVisualStyleBackColor = true;
+            this.redButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            // 
+            // credit
+            // 
+            this.credit.BackColor = System.Drawing.Color.Transparent;
+            this.credit.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.credit.Location = new System.Drawing.Point(700, 384);
+            this.credit.Name = "credit";
+            this.credit.Size = new System.Drawing.Size(118, 17);
+            this.credit.TabIndex = 8;
+            this.credit.Text = "Music: www.bensound.com";
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.LightPink;
             this.ClientSize = new System.Drawing.Size(832, 582);
+            this.Controls.Add(this.credit);
             this.Controls.Add(this.imageBox);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.backingColor);
@@ -175,6 +191,7 @@
         private System.Windows.Forms.Button yellowButton;
         private System.Windows.Forms.Button blueButton;
         private System.Windows.Forms.Label backingColor;
+        private System.Windows.Forms.Label credit;
     }
 }
 
