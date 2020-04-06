@@ -24,12 +24,14 @@ namespace AdventureGame
         int soup = 0;
 
         Random randgen = new Random();
-        //
-        //SoundPlayer bgmusic= new SoundPlayer(Properties.Resources.x);
+        
+        SoundPlayer bgmusic= new SoundPlayer(Properties.Resources.bgmusic);
 
         public Form1()
         {
             InitializeComponent();
+
+            bgmusic.PlayLooping();
         }
 
 
